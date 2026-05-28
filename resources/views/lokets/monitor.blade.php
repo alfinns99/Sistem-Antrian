@@ -171,7 +171,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    const socket = io("http://localhost:3000");
+    const socket = io();
 
     socket.on('antrian.baru', (data) => {
         $('#count-waiting-petugas').text(data.total_menunggu);

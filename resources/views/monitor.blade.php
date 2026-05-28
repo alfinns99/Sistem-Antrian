@@ -298,7 +298,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    const socket = io("http://localhost:3000");
+    const socket = io();
 
     $('#unlock-btn').on('click', function() {
         $('#audio-unlock-overlay').fadeOut();
