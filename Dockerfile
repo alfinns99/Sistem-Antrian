@@ -1,7 +1,7 @@
 FROM php:8.2-fpm-alpine
 
 # Pasang sistem dependensi & ekstensi PHP yang dibutuhkan
-RUN apk update && apk add --no-shadow --no-cache \
+RUN apk update && apk add --no-cache \
     zip \
     libzip-dev \
     libpng-dev \
