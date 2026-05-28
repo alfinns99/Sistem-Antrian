@@ -80,4 +80,9 @@ Route::get('/monitor', function () {
 // Rute API untuk data awal monitor (digunakan oleh monitor.blade.php untuk AJAX)
 Route::get('/api/antrian-data', [AntrianController::class, 'getMonitorData'])->name('api.antrian.monitor_data');
 
+// Rute Halaman Tentang Aplikasi (About)
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 // CATATAN: Rute /api/antrian-latest (Long Polling) TELAH DIHAPUS.

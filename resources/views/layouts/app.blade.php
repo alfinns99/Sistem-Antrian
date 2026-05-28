@@ -94,6 +94,11 @@
                     
                     {{-- Tautan Kiri (Publik) --}}
                     <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center" href="{{ route('about') }}">
+                                <i class="fas fa-info-circle me-2 text-primary"></i> Tentang
+                            </a>
+                        </li>
                     </ul>
 
                     {{-- Tautan Kanan (Otentikasi & Manajemen) --}}
