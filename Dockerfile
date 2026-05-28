@@ -11,7 +11,9 @@ RUN apk update && apk add --no-cache \
     curl-dev \
     sqlite-dev \
     mysql-client \
-    postgresql-dev
+    postgresql-dev \
+    nodejs \
+    npm
 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) \
