@@ -1,0 +1,52 @@
+// Fonts Import
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+// Typography
+$font-family-sans-serif: 'Inter', sans-serif;
+$font-family-heading: 'Outfit', sans-serif;
+$font-size-base: 0.925rem;
+$line-height-base: 1.6;
+
+// Body System
+$body-bg: #f8fafc;
+$body-color: #0f172a;
+
+// Custom Brand Colors (Clean, Modern Palette)
+$primary: #3d78f7;     // Indigo Premium
+$secondary: #64748b;   // Cool Slate
+$success: #10b981;     // Emerald Green
+$info: #06b6d4;        // Sleek Cyan
+$warning: #f59e0b;     // Amber Gold
+$danger: #ef4444;      // Vivid Rose/Crimson
+$light: #f1f5f9;       // Soft Blue-Gray
+$dark: #0f172a;        // Deep Slate
+
+// Theme settings
+$enable-gradients: false;
+$enable-shadows: true;
+
+// Component Border Radius (Premium rounded feel)
+$border-radius: 0.75rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 1.2rem;
+
+// Cards Custom Styles
+$card-border-width: 0;
+$card-border-radius: 1.2rem;
+$card-box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02);
+
+// Buttons Custom Styles
+$btn-border-radius: 0.75rem;
+$btn-border-radius-sm: 0.5rem;
+$btn-border-radius-lg: 1rem;
+$btn-font-weight: 600;
+$btn-focus-width: 0.2rem;
+
+// Form Input Custom Styles
+$input-border-radius: 0.75rem;
+$input-border-color: #e2e8f0;
+$input-focus-border-color: #4f46e5;
+$input-focus-box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.15);
+$input-placeholder-color: #94a3b8;
+$input-padding-y: 0.625rem;
+$input-padding-x: 1rem;
