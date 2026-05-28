@@ -1,4 +1,4 @@
-FROM php:8.2-fpm-alpine
+FROM php:8.4-fpm-alpine
 
 # Pasang sistem dependensi & ekstensi PHP yang dibutuhkan
 RUN apk update && apk add --no-cache \
