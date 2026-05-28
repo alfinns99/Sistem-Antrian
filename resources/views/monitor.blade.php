@@ -298,7 +298,10 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-    const socket = io();
+    const socketUrl = window.location.port === '8000' 
+        ? `${window.location.protocol}//${window.location.hostname}:3000` 
+        : '';
+    const socket = io(socketUrl);
 
     $('#unlock-btn').on('click', function() {
         $('#audio-unlock-overlay').fadeOut();
