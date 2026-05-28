@@ -110,23 +110,33 @@
             method: "POST",
             data: $(this).serialize(),
             success: function(res) {
-                if (res.success) {
-                    $('#print-nomor').text(res.antrian.nomor_antrian);
+                if (res.success && res.antrian) {
+                    // Isi nomor antrian secara aman
+                    $('#print-nomor').text(res.antrian.nomor_antrian || '---');
                     
                     // Sembunyikan card utama & tampilkan tiket virtual dengan animasi
                     $('#kiosk-main-card').stop(true, true).fadeOut(200, function() {
                         $('#print-success-wrapper').stop(true, true).fadeIn(300);
                     });
                     
-                    const printUrl = "{{ url('/antrians') }}/" + res.antrian.id + "/print";
-                    $('#print-frame').attr('src', printUrl);
-                    
+                    // Jadwalkan untuk menyembunyikan tiket dan mengembalikan form utama setelah 3 detik
                     setTimeout(() => {
                         $('#print-success-wrapper').stop(true, true).fadeOut(200, function() {
                             $('#kiosk-main-card').stop(true, true).fadeIn(300);
                             $btn.prop('disabled', false).removeClass('opacity-50');
                         });
                     }, 3000);
+
+                    // Pemicu cetak tiket via Iframe dengan sedikit jeda agar tidak menghambat transisi animasi awal
+                    if (res.antrian.id) {
+                        setTimeout(() => {
+                            const printUrl = "{{ url('/antrians') }}/" + res.antrian.id + "/print";
+                            $('#print-frame').attr('src', printUrl);
+                        }, 500);
+                    }
+                } else {
+                    alert('Respons server tidak valid. Silakan coba lagi.');
+                    $btn.prop('disabled', false).removeClass('opacity-50');
                 }
             },
             error: function() {
